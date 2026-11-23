@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "endpoint": "",
   "limit": 4,
   "cacheMinutes": 30,
@@ -7,6 +7,13 @@
     "enabled": true,
     "limit": 4,
     "cacheMinutes": 360,
-    "keywords": ["Large Language Model", "Reinforcement Learning", "Multimodal", "AI Agents", "AIGC"]
+    "keywords": [
+      "Data Center Cooling",
+      "Enery System",
+      "Building Energy Modeling",
+      "Reliability",
+      "Thermal Management"
+
+    ]
   }
 }

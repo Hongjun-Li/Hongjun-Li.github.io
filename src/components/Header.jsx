@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Award, GraduationCap, BookOpen, BriefcaseBusiness, FolderKanban, Newspaper, UserRound } from "lucide-react";
 import "../css/Header.css";
-import { hero, education, awards, isSectionVisible } from "../siteConfig";
+import { education, awards, isSectionVisible } from "../siteConfig";
 import recommendations from "../../config/paper-recommendations.json";
 import { isDailyPapersVisible } from "../utils/sectionVisibility";
 
@@ -16,7 +16,7 @@ const NAV = [
   { id: "about", label: "About", icon: UserRound },
   { id: "news", label: "News", icon: Newspaper },
   { id: "publications", label: "Publications", icon: BookOpen },
-  { id: "experience", label: "Experience", icon: BriefcaseBusiness },
+  // { id: "experience", label: "Experience", icon: BriefcaseBusiness },
   ...(isSectionVisible(education) ? [{ id: "education", label: "Education", icon: GraduationCap }] : []),
   ...(isSectionVisible(awards) ? [{ id: "awards", label: "Awards", icon: Award }] : []),
   { id: "projects", label: "Projects", icon: FolderKanban },
@@ -39,9 +39,10 @@ export default function Header() {
   };
   return (
     <header style={{ "--nav-count": NAV.length }} className={`header-wrapper ${scrolled ? "is-scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}><div className="header-container">
-      <button className="header-name brand-button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      {/* <button className="header-name brand-button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
         <img className="brand-logo" src={hero.brandLogo} alt={`${hero.name} logo`} />
-      </button>
+      </button> */}
+      <div className="header-name" />
       <button className={`hamburger ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen}><span className="bar bar1" /><span className="bar bar2" /><span className="bar bar3" /></button>
       <nav className={`header-nav ${menuOpen ? "show" : ""}`}>{NAV.map((item) => {
         const Icon = item.icon;

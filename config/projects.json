@@ -1,33 +1,17 @@
 [
   {
-    "title": "AI-Native Mixed-Reality Socializing",
-    "image": "assets/projects/ex-poster.jpg",
-    "video": "assets/projects/ex.mp4",
-    "meta": "XR",
-    "text": "An AI-native mixed-reality social platform that blends spatial perception, generative interaction, and shared XR experiences. The project explores how intelligent agents can make remote socializing feel more embodied, expressive, and naturally connected.",
-    "note": "Showcase only. The full app will be available in the future.",
-    "action": "app"
+    "title": "Development of Digital Twin for Liquid Cooled Data Centers",
+    "image": "assets/projects/ICDS.jpg",
+    "meta": "Data Center Cooling",
+    "text": "The broader impact potential of this ICDS project is to develop and demonstrate a digital twin for liquid-cooled data centers.",
+    "note": "Sponsored by The Penn State Institute for Computational and Data Sciences (2025-2026)"
   },
   {
-    "title": "Visual-Grounded Multimodal Search",
-    "image": "assets/projects/mmsearch.png",
-    "meta": "AI SEARCH",
-    "text": "An intent-aware multimodal search system powered by a Router–Planner–Generator architecture. It combines object grounding, region-level retrieval, and external knowledge to connect visual scenes with user intent and generate contextual, evidence-grounded responses.",
-    "action": "github"
-  },
-  {
-    "title": "ADAS for Micro-Mobility",
-    "image": "assets/projects/ADAS.png",
-    "meta": "Intelligent Transportation",
-    "text": "A vision-based advanced driver-assistance system designed for e-bicycles and other micro-mobility vehicles. It combines real-time road perception, hazard awareness, and lightweight on-device inference to improve safety in complex urban traffic.",
-    "action": "github"
-  },
-  {
-    "title": "DORIS: End-to-End Detection with Object Ranking for Retrieval Instance Selection",
-    "image": "assets/projects/doris.png",
-    "meta": "Object Recommendation",
-    "text": "We propose a novel model for visual search and shopping scenarios, such as Taobao image search and Xiaohongshu camera search, that jointly performs object detection and ranking to identify and recommend the subjects most relevant to user intent.",
-    "action": "demo",
-    "link": "https://huggingface.co/spaces/geminia/Doris"
+    "title": "A Modelica-based Virtual Testbed for Hybrid-Cooled Data Centers",
+    "image": "assets/projects/Hybrid.jpg",
+    "meta": "Data Center Cooling",
+    "text": "This project develops a Modelica-based virtual testbed for hybrid-cooled data centers, integrating air and liquid cooling systems to evaluate dynamic thermal interactions and optimize coordinated cooling control strategies.",
+    "note": "Sponsored by The Penn State University Graduate Fellowship"
   }
+
 ]

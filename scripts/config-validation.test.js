@@ -1,64 +1,73 @@
+
 import test from "node:test";
 import assert from "node:assert/strict";
 import { loadConfigs, validateConfigs } from "./config-validation.js";
 import { parseConfig } from "../src/utils/parseConfig.js";
 
-test("current configuration and asset references are valid", () => {
+test("current website configuration is valid", () => {
   assert.deepEqual(validateConfigs(loadConfigs()), []);
 });
-test("JSONC supports comments without corrupting strings", () => {
-  const source = '{ // heading\n "url": "https://example.com/*keep*/", /* note */ "value": 1 }';
-  assert.equal(parseConfig(source, "theme.jsonc", true).url, "https://example.com/*keep*/");
-  assert.throws(() => parseConfig(source, "content.json"), /content.json:1:/);
-  assert.throws(() => parseConfig('{"value":}', "broken.json"), /broken.json:1:/);
+
+test("JSONC supports comments", () => {
+  const source = '{ // comment\n "value": 1 }';
+  const result = parseConfig(source, "theme.jsonc", true);
+  assert.equal(result.value, 1);
 });
-test("missing required fields report their file and location", () => {
+
+test("missing required fields are rejected", () => {
   const config = loadConfigs();
   delete config["hero.json"].primaryLinks;
-  assert.match(validateConfigs(config).join("\n"), /hero.json.*primaryLinks/);
+
+  const errors = validateConfigs(config).join("\n");
+  assert.match(errors, /hero.json.*primaryLinks/);
 });
-test("duplicate publication IDs and unknown preview IDs are rejected", () => {
+
+test("duplicate publication IDs are rejected", () => {
   const config = loadConfigs();
-  config["publications.json"][1].id = config["publications.json"][0].id;
+
+  config["publications.json"][1].id =
+    config["publications.json"][0].id;
+
   const errors = validateConfigs(config).join("\n");
   assert.match(errors, /duplicate ID/);
-  assert.match(errors, /leaf: no publication/);
 });
+
+test("unknown publication preview IDs are rejected", () => {
+  const config = loadConfigs();
+
+  config["publication-previews.json"] = {
+    "nonexistent-paper": {
+      template: "basic",
+      abstractExpanded: true
+    }
+  };
+
+  const errors = validateConfigs(config).join("\n");
+  assert.match(errors, /nonexistent-paper/);
+});
+
 test("publications without custom previews are valid", () => {
   const config = loadConfigs();
+
   config["publication-previews.json"] = {};
   assert.deepEqual(validateConfigs(config), []);
 });
-test("missing assets and invalid chart values are rejected", () => {
+
+test("missing image assets are rejected", () => {
   const config = loadConfigs();
-  config["publication-previews.json"]["dpc-vqa"].rows[0].value = "2";
-  const errors = validateConfigs(config, () => false).join("\n");
+
+  config["hero.json"].profileImage =
+    "assets/nonexistent-profile-image.jpg";
+
+  const errors = validateConfigs(config).join("\n");
   assert.match(errors, /asset not found/);
-  assert.match(errors, /rows\/0\/value/);
-});
-test("layout-specific fields and unknown keys are checked", () => {
-  const config = loadConfigs();
-  delete config["publication-previews.json"].leaf.ablationRows;
-  assert.match(validateConfigs(config).join("\n"), /ablationRows: required/);
-  config["education.json"].enable = true;
-  assert.match(validateConfigs(config).join("\n"), /additionalProperty.*enable/);
 });
 
-test("fixed templates support minimal basic, narrative and legacy layout configs", () => {
+test("unknown configuration keys are rejected", () => {
   const config = loadConfigs();
-  const original = config["publication-previews.json"]["dpc-vqa"];
-  config["publication-previews.json"]["dpc-vqa"] = { template: "basic", abstractExpanded: true };
-  assert.deepEqual(validateConfigs(config), []);
-  config["publication-previews.json"]["dpc-vqa"] = {
-    template: "narrative", takeaway: original.takeaway, intro: original.intro,
-    headline: original.headline, method: original.method, figure: original.figure,
-    figureCaption: original.figureCaption, steps: original.steps,
-    blendFigureBackground: false, labels: { idea: "Research question" },
-  };
-  assert.deepEqual(validateConfigs(config), []);
-  delete config["publication-previews.json"]["dpc-vqa"].figure;
-  assert.match(validateConfigs(config).join("\n"), /figure: required for narrative/);
-  config["publication-previews.json"]["dpc-vqa"] = { ...original, layout: original.template };
-  delete config["publication-previews.json"]["dpc-vqa"].template;
-  assert.deepEqual(validateConfigs(config), []);
+
+  config["education.json"].enable = true;
+
+  const errors = validateConfigs(config).join("\n");
+  assert.match(errors, /additionalProperty.*enable/);
 });

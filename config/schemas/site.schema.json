@@ -41,7 +41,7 @@
     "segments": { "type": "array", "items": { "$ref": "#/$defs/segment" } },
     "hero": {
       "type": "object", "additionalProperties": false,
-      "required": ["name", "title", "profileImage", "brandLogo", "descriptions", "primaryLinks", "socialLinks"],
+      "required": ["name", "title", "profileImage", "descriptions", "primaryLinks", "socialLinks"],
       "properties": {
         "name": { "$ref": "#/$defs/text" }, "title": { "$ref": "#/$defs/text" },
         "profileImage": { "$ref": "#/$defs/asset" }, "brandLogo": { "$ref": "#/$defs/asset" },
@@ -61,7 +61,7 @@
       }
     },
     "about": {
-      "type": "object", "additionalProperties": false, "required": ["paragraphs", "quote"],
+      "type": "object", "additionalProperties": false, "required": ["paragraphs"],
       "properties": {
         "paragraphs": { "type": "array", "items": { "$ref": "#/$defs/segments" } },
         "quote": { "type": "object", "additionalProperties": false, "required": ["text", "author"], "properties": { "text": { "$ref": "#/$defs/text" }, "author": { "$ref": "#/$defs/text" } } }
@@ -92,7 +92,7 @@
       }
     } },
     "projects": { "type": "array", "items": {
-      "type": "object", "additionalProperties": false, "required": ["title", "image", "meta", "text", "action"],
+      "type": "object", "additionalProperties": false, "required": ["title", "image", "meta", "text"],
       "properties": {
         "title": { "$ref": "#/$defs/text" }, "image": { "$ref": "#/$defs/asset" }, "video": { "$ref": "#/$defs/asset" },
         "meta": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" }, "note": { "$ref": "#/$defs/text" },

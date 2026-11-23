@@ -1,31 +1,77 @@
+
 [
   {
-    "date": "2026.08",
+    "date": "2026.11",
     "segments": [
       {
-        "text": "Joined "
+        "text": "Delivered a lecture on "
       },
       {
-        "text": "ByteDance",
+        "text": "Modelica Model Development for Reliable Data Center Thermal Management",
         "strong": true
       },
       {
-        "text": ", focusing on MLLMs and Agents."
+        "text": " at Penn State."
       }
     ]
   },
   {
-    "date": "2026.07",
+    "date": "2026.11",
+    "segments": [
+      {
+        "text": "Received the "
+      },
+      {
+        "text": "Marlene and Joseph Borda Graduate Fellowship",
+        "strong": true
+      },
+      {
+        "text": " for conference travel support."
+      }
+    ]
+  },
+  {
+    "date": "2026.10",
     "segments": [
       {
         "text": "Our paper "
       },
       {
-        "text": "DPC-VQA",
-        "href": "https://arxiv.org/pdf/2604.12813"
+        "text": "Cooling Response in Liquid-Cooled Data Centers Under Spatiotemporal IT Workload Variability",
+        "strong": true
       },
       {
-        "text": " was accepted by ACM MM'26."
+        "text": " was accepted by the ASHRAE Winter Conference 2027."
+      }
+    ]
+  },
+  {
+    "date": "2026.10",
+    "segments": [
+      {
+        "text": "Received the "
+      },
+      {
+        "text": "Harry G. Miller Fellowship in Engineering",
+        "strong": true
+      },
+      {
+        "text": " for presenting at the American Modelica and FMI Conference."
+      }
+    ]
+  },
+  {
+    "date": "2026.05",
+    "segments": [
+      {
+        "text": "Received the "
+      },
+      {
+        "text": "ASHRAE College of Fellows Travel Award",
+        "strong": true
+      },
+      {
+        "text": " to attend the ASHRAE Annual Conference."
       }
     ]
   },
@@ -33,29 +79,29 @@
     "date": "2026.01",
     "segments": [
       {
-        "text": "Released the preprint "
+        "text": "Successfully passed my "
       },
       {
-        "text": "LEAF",
-        "href": "https://arxiv.org/pdf/2601.20689"
+        "text": "Ph.D. Comprehensive Exam",
+        "strong": true
       },
       {
-        "text": ", a label-efficient image quality assessment framework."
+        "text": " on demand response in liquid-cooled data centers."
       }
     ]
   },
   {
-    "date": "2025.07",
+    "date": "2025.09",
     "segments": [
       {
-        "text": "Our team placed "
+        "text": "Our project "
       },
       {
-        "text": "Top 2",
+        "text": "Development of Digital Twin for Liquid Cooled Data Centers",
         "strong": true
       },
       {
-        "text": " in the VQualA 2025 Challenge; the report appeared at the ICCV workshop."
+        "text": " was selected for the Penn State ICDS Rising Researcher Collaborations Program."
       }
     ]
   }

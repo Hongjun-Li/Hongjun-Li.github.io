@@ -99,16 +99,23 @@ export default function Projects() {
               <h3>{project.title}</h3>
               <p>{project.text}</p>
               {project.note && <div className="project-note">{project.note}</div>}
-              <div className="project-actions">
+              {/* <div className="project-actions">
                 <ProjectAction project={project} />
-              </div>
+              </div> */}
+
+              {project.action && (
+                <div className="project-actions">
+                  <ProjectAction project={project} />
+                </div>
+              )}
+
             </div>
           </article>
         ))}
       </div>
       <DailyPapers />
-      <div className="card-title portfolio-progress-title">More to Come</div>
-      <p className="portfolio-progress-text">My portfolio is still under construction—more stories are on the way.</p>
+      {/* <div className="card-title portfolio-progress-title">More to Come</div>
+      <p className="portfolio-progress-text">My portfolio is still under construction—more stories are on the way.</p> */}
     </section>
   );
 }

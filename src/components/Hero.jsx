@@ -5,16 +5,19 @@ import { FaGoogleScholar } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
 import { TbBrandOpenai } from "react-icons/tb";
-import { Camera, Sparkles } from "lucide-react";
+import { Sparkles, Building2, Zap } from "lucide-react";
 import { hero } from "../siteConfig";
 const loadResumePreview = () => import("./ResumePreview");
 const ResumePreview = lazy(loadResumePreview);
 
+
 const descriptionIcons = {
   openai: TbBrandOpenai,
   sparkles: Sparkles,
-  camera: Camera,
+  building: Building2,
+  energy: Zap,
 };
+
 
 const socialIcons = {
   email: MdEmail,

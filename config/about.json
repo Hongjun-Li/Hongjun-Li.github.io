@@ -1,22 +1,36 @@
 {
   "paragraphs": [
     [
-      { "text": "Hi, I'm " },
-      { "text": "Shubo Xu", "strong": true },
-      { "text": " (aka " },
-      { "text": "Anleeno Xu", "strong": true },
-      { "text": "), an AI algorithm engineer and researcher working on " },
-      { "text": "computer vision, multimodal large language models, generative AI, and AI agents", "strong": true },
-      { "text": ". I’m interested in how intelligent systems perceive, reason, and act—and in translating research ideas into practical applications." }
+      {
+        "text": "Hi, I'm "
+      },
+      {
+        "text": "Hongjun Li",
+        "strong": true
+      },
+      {
+        "text": ", a Ph.D. Candidate in Architectural Engineering at "
+      },
+      {
+        "text": "The Pennsylvania State University",
+        "strong": true
+      },
+      {
+        "text": ". I received my Bachelor's Degree in Civil Engineering from Chongqing University in 2022 and my Master's Degree in Architecture from Tsinghua University in 2024, where I focused on deployment strategies for distributed urban energy systems."
+      }
     ],
     [
-      { "text": "I’m currently a " },
-      { "text": "Senior Algorithm Engineer at ByteDance" },
-      { "text": ", having previously worked at Baidu and Hello. Beyond work, I enjoy photography, travel, music, reading, anime, science fiction, philosophy, and meditation." }
+      {
+        "text": "My research interests include "
+      },
+      {
+        "text": "data center cooling, energy systems, and building performance",
+        "strong": true
+      },
+      {
+        "text": ". During my master's studies, I received the National Scholarship and was recognized as an Outstanding Graduate of Beijing. Beyond research, I enjoy running."
+      }
     ]
-  ],
-  "quote": {
-    "text": "Let life be beautiful like summer flowers and death like autumn leaves.",
-    "author": "Rabindranath Tagore"
-  }
+  ]
+  
 }

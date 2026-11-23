@@ -1,57 +1,44 @@
 {
-  "name": "Shubo Xu",
-  "title": "Senior Algorithm Engineer",
-  "profileImage": "assets/anleeno-home-profile.png",
-  "brandLogo": "assets/anleeno-still-deer-script.png",
+  "name": "Hongjun Li",
+  "title": "Ph.D. Candidate in Architectural Engineering",
+  "profileImage": "assets/hongjun-home-profile.jpg",
+  
   "descriptions": [
     {
-      "icon": "openai",
-      "text": "CV & MLLM Researcher"
+      "icon": "building",
+      "text": "Building Performance Researcher"
     },
     {
-      "icon": "sparkles",
-      "text": "AIGC & AI Agents Explorer"
-    },
-    {
-      "icon": "camera",
-      "text": "Photography Enthusiast · Dreamer"
+      "icon": "energy",
+      "text": "Energy System, Data center cooling"
     }
   ],
   "primaryLinks": [
     {
-      "label": "Portfolio",
-      "url": "https://encore.anleeno.com"
-    },
-    {
-      "label": "Soundscape",
-      "url": "https://encore.anleeno.com/music"
+      "label": "Lab Website",
+      "url": "https://sites.psu.edu/sbslab/people/hongjun-li/"
     }
   ],
   "socialLinks": [
     {
       "label": "Email",
       "icon": "email",
-      "url": "mailto:xushubo0805@gmail.com"
+      "url": "mailto:hongjun.li@psu.edu"
     },
     {
       "label": "GitHub",
       "icon": "github",
-      "url": "https://github.com/Anleeno/anleeno-academic"
+      "url": "https://github.com/Hongjun-Li"
     },
     {
       "label": "Google Scholar",
       "icon": "scholar",
-      "url": "https://scholar.google.com/citations?hl=en&user=Ih094PwAAAAJ&view_op=list_works&sortby=pubdate"
+      "url": "https://scholar.google.com/citations?user=KgeWPjEAAAAJ&hl=en"
     },
     {
       "label": "LinkedIn",
       "icon": "linkedin",
-      "url": "https://www.linkedin.com/in/anleeno0805"
-    },
-    {
-      "label": "Instagram",
-      "icon": "instagram",
-      "url": "https://www.instagram.com/anleeno_ss"
+      "url": "https://www.linkedin.com/in/hongjun-li-a907a4270"
     }
   ]
 }

@@ -19,7 +19,20 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-footer-content">
-        <p>© {year} {site.copyrightName}.</p>
+        {/* <p>© {year} {site.copyrightName}.</p> */}
+
+        <p>
+          © {year} {site.copyrightName}.{" "}
+          Based on{" "}
+          <a
+            href="https://github.com/Anleeno/anleeno-academic"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Anleeno Academic
+          </a>.
+        </p>
+
         <button
           className={`back-to-top${showBackToTop ? " is-visible" : ""}`}
           type="button"
