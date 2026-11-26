@@ -1,5 +1,21 @@
 
 [
+  
+  {
+    "date": "2026.11",
+    "segments": [
+      {
+        "text": "Appointed as "
+      },
+      {
+        "text": "President",
+        "strong": true
+      },
+      {
+        "text": " of the IBPSA-USA Penn State Chapter."
+      }
+    ]
+  },
   {
     "date": "2026.11",
     "segments": [

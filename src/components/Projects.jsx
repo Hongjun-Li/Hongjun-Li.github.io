@@ -89,7 +89,7 @@ function ProjectMeta({ meta }) {
 export default function Projects() {
   return (
     <section className="card projects-section" id="projects">
-      <div className="card-title">Selected Projects</div>
+      <div className="card-title">Design</div>
       <div className="project-grid">
         {projects.map((project) => (
           <article className="project-card" key={project.title}>
