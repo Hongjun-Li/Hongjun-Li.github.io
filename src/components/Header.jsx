@@ -19,7 +19,7 @@ const NAV = [
   // { id: "experience", label: "Experience", icon: BriefcaseBusiness },
   ...(isSectionVisible(education) ? [{ id: "education", label: "Education", icon: GraduationCap }] : []),
   ...(isSectionVisible(awards) ? [{ id: "awards", label: "Awards", icon: Award }] : []),
-  { id: "projects", label: "Projects", icon: FolderKanban },
+  { id: "projects", label: "Design", icon: FolderKanban },
   ...(isDailyPapersVisible(recommendations) ? [{ id: "daily-papers", label: "Trends", icon: DailyPaperIcon }] : []),
 ];
 
